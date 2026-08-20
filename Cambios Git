@@ -1,0 +1,33 @@
+git clone https://dev.azure.com/ORGANIZACION/PROYECTO/_git/REPOSITORIO
+
+cd REPOSITORIO
+
+git checkout dev
+
+git pull origin dev
+
+# Realizas los ajustes en Visual Studio
+
+git status
+
+git add .
+
+git commit -m "Ajuste de compatibilidad y metadata ETLs SSIS"
+
+git push origin dev
+
+
+Si prefieres trabajar correctamente con una rama feature
+Para los cambios que estás haciendo en las ETLs, sería incluso mejor:
+
+git checkout dev
+git pull origin dev
+
+git checkout -b feature/ajustes-etl-ssis
+
+# Realizas los cambios
+
+git status
+git add .
+git commit -m "Ajuste de compatibilidad ETLs SSIS"
+git push -u origin feature/ajustes-etl-ssis
